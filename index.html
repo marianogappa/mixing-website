@@ -1,0 +1,389 @@
+<!doctype html5>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+<style>
+/* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+body {
+  background: url('background.png') #DDD no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+a:visited { text-decoration: none; color:blue; }
+header nav ul li a:visited { text-decoration: none; color:white; }
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Lato', arial, serif;
+
+    font-size: 40px;
+    padding: 10px;
+    padding-top: 13px;
+    padding-left: 20px;
+
+    -webkit-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
+}
+
+header ul {
+    display: inline;
+    float:right;
+    margin-top: -44px;
+    margin-right: 30px;
+}
+header li {
+    display: inline;
+    padding: 15px;
+    font-size: 25px;
+    font-family: 'Jura', sans-serif;
+}
+header li a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    width: 1200px;
+    margin:0 auto;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(33, 33, 33);
+    /*outline: 1px solid red;*/
+}
+section span {
+    display:inline-block;
+    width: 850px;
+}
+section img {
+    display:inline-block;
+    vertical-align: top;
+}
+section .title {
+    font-family: 'Helvetica Neue', arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+section article {
+    border: 1px solid gray;
+    padding: 40px;
+    border-radius: 3px;
+    background-color: #EEE;
+    line-height: 30px;
+
+    -webkit-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+section article ul {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url('tick.png');
+    padding-left: 20px;
+}
+
+section article .rate {
+    margin-bottom: 50px;
+}
+
+section article p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article span {
+    padding-bottom: 30px;
+}
+
+article img {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section input {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+section textarea {
+    display: block;
+    width: 800px;
+    height: 530px;
+    padding: 20px;
+    border-color: rgb(220, 220, 220);
+}
+
+section button {
+    display: inline;
+    margin-top: 20px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #d14836;
+    background-image: -moz-linear-gradient(center top , #dd4B39, #d14836);
+    border: 1px solid transparent;
+    color:#fff;
+    border-radius: 2px;
+    font-size: 18px;
+    height: 60px;
+    min-width: 200px;
+    white-space: nowrap;
+}
+
+section button:hover{
+    background-color: #C53727;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+    border: 1px solid #b0281A;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#contact span {
+    display: inline;
+    margin-left: 15px;
+}
+
+#contact a {
+    color: rgb(33, 33, 166);
+    text-decoration: none;
+}
+#contact a:hover {
+        text-decoration: underline;
+}
+
+
+footer {
+    height: 100px;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.anchor{ padding-top: 100px; } /* Fix sticky header + anchor issue */
+
+header nav ul li a {
+    color: rgb(255, 255, 255);
+}
+header nav ul li a:hover {
+    color: rgb(210, 210, 210);
+}
+.red { color: #d14836;}
+.orange { color: #d14836;}
+.yellow { color: #d14836;}
+.green { color: #d14836;}
+.blue { color: #d14836;}
+.purple { color: #d14836;}
+</style>
+</head>
+<body>
+    <header><span>Mariano Gappa Mixing</span>
+    <nav>
+    <ul>
+    <li><a href="#services"><span class="red">#</span>Services</a></li>
+    <li><a href="#about"><span class="orange">#</span>About</a></li>
+    <li><a href="#mixes"><span class="yellow">#</span>Mixes</a></li>
+    <li><a href="#pricing"><span class="green">#</span>Pricing</a></li>
+    <li><a href="#how_it_works"><span class="blue">#</span>How it works</a></li>
+    <li><a href="#contact"><span class="purple">#</span>Contact</a></li>
+    </ul>
+    </nav>
+    </header>
+
+    <section id="services" class="anchor">
+    <article>
+    <div class="title">Services</div>
+        <span>
+        <b>Professional studio-quality mixing for an affordable price</b><br/><br/>
+
+        <ul>
+        <li><a href="#about">Mixing professional</a> coming from an Engineer background and Berklee College of Music</li>
+        <li>Hear some of <a href="#mixes">my mixes</a></li>
+        <li>See how much I <a href="#pricing">charge</a> for a great mix</li>
+        <li>Before proceeding, see <a href="#how_it_works">how to</a> prepare your material</li>
+        <li>And then <a href="#contact">contact me</a> and let's make music!</li>
+        </ul>
+        <br/><br/>
+        </span>
+        <a href="#about" class="no-underline"><button>ABOUT THE MIXER</button></a>
+    </article></section>
+    <section id="about" class="anchor">
+    <article>
+    <div class="title">About me</div>
+        <span>
+        My name is Mariano Gappa;<br/>
+        I'm based in Auckland, New Zealand<br/><br/>
+
+        I've been a Software Engineer by day and a Mixing Engineer by night for a decade now, and I love being both.<br/>
+        That means I have everything you can expect from a competent Mixing Engineer, and something your average mixer doesn't have: I deeply understand how digital works; I'm a Software expert.<br/><br/>
+        </span>
+        <img src="Mariano.jpg" height="200"/>
+
+        <a href="https://www.berklee.edu/"><img src="berklee.png" height="200"/></a>
+        <span>
+        Recently, I've completed my mixing studies at the renowned <a href="https://www.berklee.edu/">Berklee College of Music</a> with the highest grade. Berklee is known as the world's foremost institute for the study of jazz and modern American music (<a href="https://en.wikipedia.org/wiki/Berklee_College_of_Music#cite_ref-3">quote</a>).<br/><br/>
+
+        Also, I've worked under the mentoring of Mixing Engineer <a href="http://www.allmusic.com/artist/dave-dysart-mn0000684236/credits">Dave Dysart</a>, who has recently mixed Yes' last album <a href="https://en.wikipedia.org/wiki/Heaven_%26_Earth_(Yes_album)#cite_ref-33">Heaven and Earth</a>.<br/><br/><br/><br/>
+        </span>
+
+        <div class="title">Quotes</div>
+        "Mariano has the makings of a great mixer, he consistently delivers high quality, professional work. He is dedicated, creative and detail oriented.", Mixing Engineer <a href="http://www.allmusic.com/artist/dave-dysart-mn0000684236/credits">Dave Dysart</a>
+        </div>
+        <br/><br/>
+        <a href="#mixes" class="no-underline"><button>LET'S HEAR SOME MIXES</button></a>
+    </article></section>
+    <section id="mixes" class="anchor">
+    <article>
+        <div class="title">Mixes</div>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/71553614&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        <br/><br/>
+        <a href="#pricing" class="no-underline"><button>OK, HOW MUCH DOES IT COST?</button></a>
+    </article></section>
+    <section id="pricing" class="anchor">
+    <article>
+    <div class="title">Rates</div>
+        <p>
+        <div class="rate"><b>NZD 150</b> per song (or ~ USD 100, ~ EUR 100)</div>
+
+        <p><b>This includes</b></p>
+        <ul>
+            <li>Main mix in a popular format of your preference (e.g. MP3 320 kbps)</li>
+            <li>The separate tracks in WAV format should you need to take them to a Mastering Engineer (if requested)</li>
+            <li>TV mix, A capella mix (if requested)</li>
+            <li>Round of review and rework based on your feedback</li>
+        </ul>
+
+        <p><b>Please note</b></p>
+        <ul>
+            <li>If your mix requires extensive editing / tunning, it will increase the rate</li>
+            <li>This rate is for a standard mix; if your piece is too long/short, too complex/simple, we can discuss a different rate</li>
+            <li>Please read the 'How it works' section to make the most out of your time and money</li>
+            <li>Payments go via PayPal; pay 50% upfront and 50% upon reception of the candidate mix</li>
+            <li>Discount for bulk; e.g. if you're making an EP or an album</li>
+        </ul>
+        </p>
+        <a href="#how_it_works" class="no-underline"><button>OK, HOW DO I START?</button></a>
+    </article></section>
+    <section id="how_it_works" class="anchor">
+    <article>
+    <div class="title">How it works</div>
+            <p>
+
+        <p><b>First of all</b></p>
+        <ul>
+            <li>Are you sure you are looking for a Professional Mixer? Do you understand what a mixer does? If you are unsure, you might want to check the Wikipedia definition of <a href="https://en.wikipedia.org/wiki/Audio_mixing_(recorded_music)">Audio Mixing</a>; it's very good and you'll learn something for sure!</li>
+            <li><a href="#contact">Send me an email</a>. I prepared a template for you. Please send me a rough demo of your song along with the email.</li>
+        </ul>
+
+        <p><b>Before exporting your tracks</b></p>
+        <ul>
+            <li>Great mixes come from great recordings; there's a limit to the magic I can do. Make sure you record great sounding tracks.</li>
+            <li>Please check your tracks; make sure nothing is missing and everything sounds right; otherwise we may find out too late to save money and time.</li>
+            <li>What makes your song great? If you don't know this already, I'll have to guess it, and if we disagree I could end up highlighting something you are not crazy about, etc. You must have some idea of what you want the end result to sound like.</li>
+            <li>Are the vocals in tune? Note that tuning the vocal tracks is editing, not mixing, and it's not included in the standard rate (I won't charge you for a few corrections, but complete tuning takes a lot of time and effort.)</li>
+            <li>Same goes for vocal comping; this is an editing task you want to do before you send your tracks.</li>
+        </ul>
+
+        <p><b>Exporting your tracks</b></p>
+        <ul>
+            <li>Export your individual audio tracks from the DAW (Digital Audio Workstation) used to record the songs. If you used a recording engineer or someone other than you to record the songs, or if you recorded the songs at a studio, ask them to send you your audio tracks.</li>
+            <li>The standard format for the individual audio tracks is mono WAV files, or interleaved (stereo) WAV files. It is important that they are exported at the best possible quality: 24 bit / 44kHz or 48kHz are decent quality standards.</li>
+        </ul>
+
+        <p><b>Sending your tracks</b></p>
+        <ul>
+            <li>The bulk of WAV files you need to send is likely to occupy as much as 500 MB or more; this doesn't fit on an email attachment.</li>
+            <li>Your best bet to send the files to me is by uploading them to some cloud storage system and sharing it with me by giving me a link to them. Two of the most popular free cloud storage services are <a href="https://www.google.com/drive/">Google Drive</a> and <a href="https://www.dropbox.com/">Dropbox</a>.</li>
+            <li>The standard format for the individual audio tracks is mono WAV files, or interleaved (stereo) WAV files. It is important that they are exported at the best possible quality: 24 bit / 44kHz or 48kHz are decent quality standards.</li>
+            <li>Please send me whatever you think will help me understand your vision for this song. Be smart: don't send me a 500 page book, I won't have time to read it and even if I did I would miss your highlights. Send me the lyrics, your notes, your ideas, maybe some reference songs? Help me love your project and I will mix it with more enthusiasm!</li>
+        </ul>
+
+        <p><b>Initial check and 50% payment upfront</b></p>
+        <ul>
+            <li>Once I receive your stuff and make sure everything is ok, I will give you instructions on how to make an upfront payment for 50% of the total cost described <a href="#pricing">here</a>.</li>
+            <li>After the payment clears out, I will start working on your mix. I might contact you if I feel like I need to run some decisions by you.</li>
+        </ul>
+
+        <p><b>Review and final mix</b></p>
+        <ul>
+            <li>When I finish a draft mix, I will send it to you in MP3 format so that you can review it and give me some feedback. You need to be happy with your final product. I'll do my best to understand your vision, but you need to be responsible and smart about the review process: extensive review processes will mean extra charge.</li>
+            <li>Once you're happy with your mix, I'll send you the final mix package upon clearing of the final 50% payment.</li>
+            <li>Finally, let's review the experience. Are you satisfied with the product? Was it a smooth process? Email me your review. This way I can learn how to work better, and I can make better mixes for you the next time. Can I quote you on this site? Can I showcase a sample of your mix?</li><br/><br/>
+        </ul>
+        <a href="#contact" class="no-underline"><button>OK, LET'S DO THIS!</button></a>
+</p>
+    </article></section>
+    <section id="contact" class="anchor">
+    <article>
+        <div class="title">Contact</div>
+        <input type="text" id="emailSubject" value="John Doe - Mixing request" />
+        <textarea id="emailBody">
+Hi,
+
+my name is John Doe; I'm the lead singer of the rock band The Does.
+
+We're currently undergoing recording of our second studio album, and are looking for an excellent but at the same time affordable mixer.
+Does this sound like you?
+
+We'd like you to mix our song "Does for life"; it's a rock ballad with a 90s feel. It's about 4 minutes long, with complex arrangements and about 25 tracks.
+
+I'm attaching a rough demo to give you an idea.
+
+Looking forward to hearing from you.
+
+Sincerely,
+
+John Doe
+        </textarea>
+        <button onclick="sendMail(); return false">REVIEW IN MY EMAIL CLIENT</button>
+        <span>or just email me at <a href="mailto:mariano.gappa@gmail.com">mariano.gappa@gmail.com</a></span>
+    </article></section>
+    <footer></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    function sendMail() {
+        var link = "mailto:mariano.gappa@gmail.com"
+                 + "?subject=" + escape(document.getElementById('emailSubject').value)
+                 + "&body=" + escape(document.getElementById('emailBody').value)
+        ;
+
+        window.open(link);
+    }
+</script>
+<script>
+    $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+    });
+</script>
+</body>
+</html>
