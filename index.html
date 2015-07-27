@@ -3,6 +3,7 @@
 <head>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'>
 <style>
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
@@ -14,19 +15,37 @@ body {
   -moz-background-size: cover;
   background-size: cover;
 }
-a:visited { text-decoration: none; color:blue; }
+a {
+    color: rgb(33, 33, 166);
+    text-decoration: none;
+}
+a:visited, a:hover {
+    text-decoration: underline;
+}
+
+b {
+    font-weight: 400;
+}
+
+i {
+    display: block;
+    margin-bottom: -20px;
+}
+
 header nav ul li a:visited { text-decoration: none; color:white; }
+header nav ul li a:hover { text-decoration: none; }
 header {
     position: fixed;
     width: 100%;
-    height: 70px;
+    height: 75px;
     background-color: black;
     color: white;
-    font-family: 'Lato', arial, serif;
+    font-family: 'Titillium Web', arial, serif;
+    font-weight: 700;
 
     font-size: 40px;
     padding: 10px;
-    padding-top: 13px;
+    padding-top: 5px;
     padding-left: 20px;
 
     -webkit-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
@@ -37,7 +56,7 @@ header {
 header ul {
     display: inline;
     float:right;
-    margin-top: -20px;
+    margin-top: -32px;
     margin-right: 30px;
 }
 header li {
@@ -55,7 +74,7 @@ section {
     width: 900px;
     margin:0 auto;
     font-family: 'Open Sans', arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-variant: normal;
     font-weight: 100;
@@ -72,17 +91,36 @@ section img {
     vertical-align: top;
 }
 section .title {
+    padding: 40px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(200, 200, 200);
+
+
+    -webkit-box-shadow: 0px 2px 1px rgba(200, 200, 200, 0.5);
+    -moz-box-shadow: 0px 2px 1px rgba(200, 200, 200, 0.5);
+    box-shadow: 0px 2px 1px rgba(200, 200, 200, 0.5);
+
     font-family: 'Helvetica Neue', arial, sans-serif;
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 300;
+    text-shadow: 0px 1px 1px gray;
+}
+
+.special-title {
+    border-radius: 0px 0px 0px 0px !important;
+    border-top: 1px solid rgb(220, 220, 220);
+}
+
+h2 {
+    font-size: 20px;
 }
 
 section article {
     border: 1px solid gray;
-    padding: 40px;
     border-radius: 3px;
     background-color: #EEE;
-    line-height: 30px;
+    line-height: 26px;
 
     -webkit-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
@@ -90,11 +128,19 @@ section article {
 
 }
 
+section article .content {
+    padding: 40px;
+}
+
 section article ul {
     list-style-type: square;
     list-style-position: inside;
     list-style-image: url('tick.png');
     padding-left: 20px;
+}
+
+section article ul li {
+    padding-bottom: 5px;
 }
 
 section article .rate {
@@ -113,6 +159,10 @@ article span {
 article img {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+#berklee {
+    padding-left: 0px;
 }
 
 section input {
@@ -146,6 +196,12 @@ section button {
     height: 60px;
     min-width: 200px;
     white-space: nowrap;
+    font-weight: 600;
+
+    -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+
 }
 
 section button:hover{
@@ -154,6 +210,11 @@ section button:hover{
     border: 1px solid #b0281A;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+
+    -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+
 }
 
 #contact span {
@@ -175,7 +236,7 @@ footer {
 }
 
 .no-underline {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .anchor{ padding-top: 120px; } /* Fix sticky header + anchor issue */
@@ -186,6 +247,9 @@ header nav ul li a {
 header nav ul li a:hover {
     color: rgb(210, 210, 210);
 }
+
+.inline { display: inline; }
+.button {  }
 .red { color: #d14836;}
 .orange { color: #d14836;}
 .yellow { color: #d14836;}
@@ -211,8 +275,9 @@ header nav ul li a:hover {
     <section id="services" class="anchor">
     <article>
     <div class="title">Services</div>
+    <div class="content">
         <span>
-        <b>Professional studio-quality mixing for an affordable price</b><br/><br/>
+        <h2><b>Professional studio-quality mixing for an affordable price</b></h2><br/>
 
         <ul>
         <li><a href="#about">Mixing professional</a> coming from an Engineer background and Berklee College of Music</li>
@@ -221,46 +286,51 @@ header nav ul li a:hover {
         <li>Before proceeding, see <a href="#how_it_works">how to</a> prepare your material</li>
         <li>And then <a href="#contact">contact me</a> and let's make music!</li>
         </ul>
-        <br/><br/>
+
         </span><br/>
-        <a href="#about" class="no-underline"><button>ABOUT THE MIXER</button></a>
+        <div class="button"><a href="#about" class="no-underline"><button>ABOUT THE MIXER</button></a></div>
+    </div>
     </article></section>
     <section id="about" class="anchor">
     <article>
     <div class="title">About me</div>
+    <div class="content">
         <span class="about">
         My name is Mariano Gappa;<br/>
         I'm based in Auckland, New Zealand<br/><br/>
 
-        I've been a Software Engineer by day and a Mixing Engineer by night for a decade now, and I love being both.<br/>
+        I've been a Software Engineer by day and a Mixing Engineer by night for a decade now, and I love being both.<br/><br/>
+
         That means I have everything you can expect from a competent Mixing Engineer, and something your average mixer doesn't have: I deeply understand how digital works; I'm a Software expert.<br/><br/>
         </span>
         <img src="Mariano.jpg" height="200"/>
 
-        <a href="https://www.berklee.edu/"><img src="berklee.png" height="200"/></a>
+        <a href="https://www.berklee.edu/"><img id="berklee" src="berklee.png" height="200"/></a>
         <span class="about">
         Recently, I've completed my mixing studies at the renowned <a href="https://www.berklee.edu/">Berklee College of Music</a> with the highest grade. Berklee is known as the world's foremost institute for the study of jazz and modern American music (<a href="https://en.wikipedia.org/wiki/Berklee_College_of_Music#cite_ref-3">quote</a>).<br/><br/>
 
-        Also, I've worked under the mentoring of Mixing Engineer <a href="http://www.allmusic.com/artist/dave-dysart-mn0000684236/credits">Dave Dysart</a>, who has recently mixed Yes' last album <a href="https://en.wikipedia.org/wiki/Heaven_%26_Earth_(Yes_album)#cite_ref-33">Heaven and Earth</a>.<br/><br/><br/><br/>
+        Also, I've worked under the mentoring of Mixing Engineer <a href="http://www.allmusic.com/artist/dave-dysart-mn0000684236/credits">Dave Dysart</a>, who has recently mixed Yes' last album <a href="https://en.wikipedia.org/wiki/Heaven_%26_Earth_(Yes_album)#cite_ref-33">Heaven and Earth</a>.<br/><br/>
         </span>
-
-        <div class="title">Quotes</div>
-        "Mariano has the makings of a great mixer, he consistently delivers high quality, professional work. He is dedicated, creative and detail oriented.", Mixing Engineer <a href="http://www.allmusic.com/artist/dave-dysart-mn0000684236/credits">Dave Dysart</a>
-        </div>
+    </div>
+    <div class="title special-title">Quotes</div>
+    <div class="content">
+        <i>"Mariano has the makings of a great mixer, he consistently delivers high quality, professional work. He is dedicated, creative and detail oriented."</i><br/><b>Mixing Engineer <a href="http://www.allmusic.com/artist/dave-dysart-mn0000684236/credits">Dave Dysart</a></b>
         <br/><br/>
-        <a href="#mixes" class="no-underline"><button>LET'S HEAR SOME MIXES</button></a>
+        <div class="button"><a href="#mixes" class="no-underline"><button>LET'S HEAR SOME MIXES</button></a></div>
+    </div>
     </article></section>
     <section id="mixes" class="anchor">
     <article>
         <div class="title">Mixes</div>
+        <div class="content">
         <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/128314750&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <br/><br/>
-        <a href="#pricing" class="no-underline"><button>OK, HOW MUCH DOES IT COST?</button></a>
+        <div class="button"><a href="#pricing" class="no-underline"><button>OK, HOW MUCH DOES IT COST?</button></a></div></div>
     </article></section>
     <section id="pricing" class="anchor">
     <article>
     <div class="title">Rates</div>
-        <p>
+    <div class="content">
         <div class="rate"><b>NZD 150</b> per song (or ~ USD 100, ~ EUR 100)</div>
 
         <p><b>This includes</b></p>
@@ -278,14 +348,14 @@ header nav ul li a:hover {
             <li>Payments go via PayPal; pay 50% upfront and 50% upon reception of the candidate mix</li>
             <li>Discount for bulk; e.g. if you're making an EP or an album</li>
         </ul>
-        </p>
-        <a href="#how_it_works" class="no-underline"><button>OK, HOW DO I START?</button></a>
+        <br/>
+        <div class="button"><a href="#how_it_works" class="no-underline"><button>OK, HOW DO I START?</button></a></div>
+    </div>
     </article></section>
     <section id="how_it_works" class="anchor">
     <article>
     <div class="title">How it works</div>
-            <p>
-
+    <div class="content">
         <p><b>First of all</b></p>
         <ul>
             <li>Are you sure you are looking for a Professional Mixer? Do you understand what a mixer does? If you are unsure, you might want to check the Wikipedia definition of <a href="https://en.wikipedia.org/wiki/Audio_mixing_(recorded_music)">Audio Mixing</a>; it's very good and you'll learn something for sure!</li>
@@ -326,12 +396,13 @@ header nav ul li a:hover {
             <li>Once you're happy with your mix, I'll send you the final mix package upon clearing of the final 50% payment.</li>
             <li>Finally, let's review the experience. Are you satisfied with the product? Was it a smooth process? Email me your review. This way I can learn how to work better, and I can make better mixes for you the next time. Can I quote you on this site? Can I showcase a sample of your mix?</li><br/><br/>
         </ul>
-        <a href="#contact" class="no-underline"><button>OK, LET'S DO THIS!</button></a>
-</p>
+        <div class="button"><a href="#contact" class="no-underline"><button>OK, LET'S DO THIS!</button></a></div>
+    </div>
     </article></section>
     <section id="contact" class="anchor">
     <article>
         <div class="title">Contact</div>
+        <div class="content">
         <input type="text" id="emailSubject" value="John Doe - Mixing request" />
         <textarea id="emailBody">
 Hi,
@@ -351,8 +422,9 @@ Sincerely,
 
 John Doe
         </textarea>
-        <button onclick="sendMail(); return false">REVIEW IN MY EMAIL CLIENT</button>
+        <div class="inline button"><button onclick="sendMail(); return false">REVIEW IN MY EMAIL CLIENT</button></div>
         <span>or just email me at <a href="mailto:mariano.gappa@gmail.com">mariano.gappa@gmail.com</a></span>
+        </div>
     </article></section>
     <footer></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
