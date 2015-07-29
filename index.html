@@ -32,8 +32,10 @@ i {
     margin-bottom: -20px;
 }
 
-header nav ul li a:visited { text-decoration: none; color:white; }
-header nav ul li a:hover { text-decoration: none; }
+header span a { color: white; }
+
+header nav ul li a:visited, header span a:visited { text-decoration: none; color:white; }
+header nav ul li a:hover, header span a:hover { text-decoration: none; }
 header {
     position: fixed;
     width: 100%;
@@ -259,7 +261,7 @@ header nav ul li a:hover {
 </style>
 </head>
 <body>
-    <header><span>Mariano Gappa Mixing</span>
+    <header><span><a href="#services">Mariano Gappa Mixing</a></span>
     <nav>
     <ul>
     <li><a href="#services"><span class="red">#</span>Services</a></li>
