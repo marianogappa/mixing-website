@@ -1,9 +1,9 @@
 <!doctype html5>
 <html>
 <head>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
 <style>
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - http://cssreset.com */
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
@@ -14,6 +14,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  min-width: 850px;
 }
 a {
     color: rgb(33, 33, 166);
@@ -31,41 +32,53 @@ i {
     display: block;
     margin-bottom: -20px;
 }
-
+header .main_title {
+    display: block;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 header span a { color: white; }
 
-header nav ul li a:visited, header span a:visited { text-decoration: none; color:white; }
-header nav ul li a:hover, header span a:hover { text-decoration: none; }
 header {
+    height: 105px;
     position: fixed;
     width: 100%;
-    height: 75px;
     background-color: black;
     color: white;
-    font-family: 'Titillium Web', arial, serif;
-    font-weight: 700;
+    font-family: 'Merriweather', arial, serif;
+    font-style: italic;
+    font-weight: 100;
 
     font-size: 40px;
+    padding-top: 15px;
     padding: 10px;
-    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 20px;
 
     -webkit-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
 }
+nav {
+    display: block; text-align: right;
+    min-width: 850px;
+    line-height: 15px;
+}
+nav ul li a:visited, header span a:visited { text-decoration: none; color:white; }
+nav ul li a:hover, header span a:hover { text-decoration: none; }
 
 header ul {
     display: inline;
-    float:right;
-    margin-top: -32px;
     margin-right: 30px;
 }
 header li {
     display: inline;
-    padding: 15px;
-    font-size: 25px;
-    font-family: 'Jura', sans-serif;
+    padding: 10px;
+    padding-top: 0px;
+    font-size: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
 }
 header li a {
     text-decoration: none;
@@ -73,7 +86,7 @@ header li a {
 }
 
 section {
-    width: 900px;
+    width: 827px;
     margin:0 auto;
     font-family: 'Open Sans', arial, sans-serif;
     font-size: 18px;
@@ -177,7 +190,7 @@ section input {
 
 section textarea {
     display: block;
-    width: 800px;
+    width: 750px;
     height: 560px;
     padding: 20px;
     border-color: rgb(220, 220, 220);
@@ -203,7 +216,6 @@ section button {
     -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-
 }
 
 section button:hover{
@@ -232,7 +244,6 @@ section button:hover{
         text-decoration: underline;
 }
 
-
 footer {
     height: 100px;
 }
@@ -241,35 +252,30 @@ footer {
     text-decoration: none !important;
 }
 
-.anchor{ padding-top: 120px; } /* Fix sticky header + anchor issue */
+.anchor{ padding-top: 140px; } /* Fix sticky header + anchor issue */
 
-header nav ul li a {
+nav ul li a {
     color: rgb(255, 255, 255);
 }
-header nav ul li a:hover {
+nav ul li a:hover {
     color: rgb(210, 210, 210);
 }
 
 .inline { display: inline; }
-.button {  }
 .red { color: #d14836;}
-.orange { color: #d14836;}
-.yellow { color: #d14836;}
-.green { color: #d14836;}
-.blue { color: #d14836;}
-.purple { color: #d14836;}
+
 </style>
 </head>
 <body>
-    <header><span><a href="#services">Mariano Gappa Mixing</a></span>
+    <header><span class="main_title"><a href="#services">Mariano Gappa Mixing</a></span>
     <nav>
     <ul>
     <li><a href="#services"><span class="red">#</span>Services</a></li>
-    <li><a href="#about"><span class="orange">#</span>About</a></li>
-    <li><a href="#mixes"><span class="yellow">#</span>Mixes</a></li>
-    <li><a href="#pricing"><span class="green">#</span>Pricing</a></li>
-    <li><a href="#how_it_works"><span class="blue">#</span>How it works</a></li>
-    <li><a href="#contact"><span class="purple">#</span>Contact</a></li>
+    <li><a href="#about"><span class="red">#</span>About</a></li>
+    <li><a href="#mixes"><span class="red">#</span>Mixes</a></li>
+    <li><a href="#pricing"><span class="red">#</span>Pricing</a></li>
+    <li><a href="#how_it_works"><span class="red">#</span>How it works</a></li>
+    <li><a href="#contact"><span class="red">#</span>Contact</a></li>
     </ul>
     </nav>
     </header>
