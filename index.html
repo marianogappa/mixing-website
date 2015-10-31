@@ -198,6 +198,7 @@ section textarea {
 section button {
     display: inline;
     margin-top: 20px;
+    margin-right: 20px;
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
@@ -224,15 +225,25 @@ section button:hover{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
-    -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 1px zrgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
 
+.alternative {
+    background-color: DarkGray;
+}
+
+.alternative:hover {
+    background-color: gray;
+    border: 1px solid gray;
 }
 
 #contact span {
-    display: inline;
-    margin-left: 15px;
+    display: block;
+    padding: 0px;
+    padding-bottom: 5px;
+    padding-top: 10px;
 }
 
 #contact a {
@@ -387,7 +398,9 @@ footer {
     <article>
         <div class="title">Contact</div>
         <div class="content">
-        <input type="text" id="emailSubject" value="John Doe - Mixing request" />
+        <form method="POST" action="//formspree.io/mariano.gappa@gmail.com">
+        <span>Subject</span> <input type="text" name="_subject" id="emailSubject" value="John Doe - Mixing request" />
+        <span>Your email</span> <input type="text" name="_replyTo" id="emailEmail" value="john.doe@gmail.com" />
         <textarea id="emailBody">
 Hi,
 
@@ -406,7 +419,9 @@ Sincerely,
 
 John Doe
         </textarea>
-        <div class="inline button"><button onclick="sendMail(); return false">REVIEW IN MY EMAIL CLIENT</button></div>
+        <div class="inline button"><button>SEND</button>
+        <button class="alternative" onclick="sendMail(); return false">REVIEW IN MY EMAIL CLIENT</button></div>
+        </form>
         <span>or just email me at <a href="mailto:mariano.gappa@gmail.com">mariano.gappa@gmail.com</a></span>
         </div>
     </article></section>
