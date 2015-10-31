@@ -34,14 +34,13 @@ i {
 }
 header .main_title {
     display: block;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 8px;
 }
 header span a { color: white; }
 
 header {
-    height: 105px;
+    height: 95px;
     position: fixed;
     width: 100%;
     background-color: black;
@@ -52,37 +51,37 @@ header {
 
     font-size: 40px;
     padding-top: 15px;
-    padding: 10px;
     padding-bottom: 5px;
-    padding-left: 20px;
 
     -webkit-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 7px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    min-width: 850px;
 }
 nav {
-    display: block; text-align: right;
+    display: block; text-align: center;
     min-width: 850px;
     line-height: 15px;
+    color: rgb(255, 0, 0 );
 }
-nav ul li a:visited, header span a:visited { text-decoration: none; color:white; }
+nav ul li a:visited, header span a:visited,
 nav ul li a:hover, header span a:hover { text-decoration: none; }
 
-header ul {
-    display: inline;
-    margin-right: 30px;
+nav ul li a {
+    color: rgb(190, 190, 190);
 }
+nav ul li a:hover {
+    color: rgb(210, 210, 210);
+}
+
 header li {
     display: inline;
     padding: 10px;
     padding-top: 0px;
-    font-size: 22px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
-}
-header li a {
-    text-decoration: none;
-    color: white;
 }
 
 section {
@@ -254,13 +253,6 @@ footer {
 
 .anchor{ padding-top: 140px; } /* Fix sticky header + anchor issue */
 
-nav ul li a {
-    color: rgb(255, 255, 255);
-}
-nav ul li a:hover {
-    color: rgb(210, 210, 210);
-}
-
 .inline { display: inline; }
 .red { color: #d14836;}
 
@@ -270,11 +262,11 @@ nav ul li a:hover {
     <header><span class="main_title"><a href="#mixes">Mariano Gappa Mixing</a></span>
     <nav>
     <ul>
-    <li><a href="#mixes"><span class="red">#</span>Mixes</a></li>
-    <li><a href="#about"><span class="red">#</span>About</a></li>
-    <li><a href="#pricing"><span class="red">#</span>Pricing</a></li>
-    <li><a href="#how_it_works"><span class="red">#</span>How it works</a></li>
-    <li><a href="#contact"><span class="red">#</span>Contact</a></li>
+    <li><a href="#mixes">Mixes</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#how_it_works">How it works</a></li>
+    <li><a href="#contact">Contact</a></li>
     </ul>
     </nav>
     </header>
